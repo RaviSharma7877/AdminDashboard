@@ -88,6 +88,18 @@ b{
 .primary{
     color: var(--color-primary);
 }
+.primary button{
+    margin: 0 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.primary button:nth-child(1):hover{
+    color: var(--color-success);
+}
+.primary button:nth-child(2):hover{
+    color: var(--color-danger);
+    
+}
 .danger{
     color: var(--color-danger);
 }
@@ -183,6 +195,7 @@ aside .sidebar a:hover span{
 aside .sidebar .message-count{
     background-color: var(--color-danger);
     padding: 2px 6px;
+    margin-right: 5px;
     color: var(--color-white);
     font-size: 11px;
     border-radius: var(--border-radius-1);
@@ -459,6 +472,52 @@ main .recent-orders a{
     align-items: center;
     gap: 0.6rem;
 }
+/* target vs sales */
+.Sales-difference{
+    margin-top: 1.3rem;
+}
+.target-vs-sales--container{
+    width: 100%;
+    background: var(--color-white);
+    margin: 1.4rem 0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+}
+.target-vs-sales--container:hover{
+    box-shadow: none;
+}
+
+.sales--value{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.target , .current{
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+}
+
+.target .circle{
+    margin-right: 5px;
+    color: #3bc59a;
+}
+.current .circle{
+    margin-right: 5px;
+    color: #9966ff;
+}
+
+.target--vs--sales{
+    width: auto;
+   
+}
+
+.target--vs--sales canvas{
+    max-height: 200px;
+}
+
 
 
 @media screen and (max-width:1200px){
@@ -486,6 +545,9 @@ main .recent-orders a{
     }
     main .new-users .user-list .user{
         flex-basis: 40%;
+    }
+    .target-vs-sales--container{
+        width: 83vw;
     }
     main .recent-orders{
         width: 94%;
@@ -561,6 +623,9 @@ main .recent-orders a{
     main .recent-orders{
         position: relative;
         margin: 3rem 0 0 0;
+        width: 100%;
+    }
+    .target-vs-sales--container{
         width: 100%;
     }
     main .recent-orders table{
